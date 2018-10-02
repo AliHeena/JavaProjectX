@@ -1,0 +1,9 @@
+driver: org.postgresql.Driver
+
+hostname: jdbc:postgresql://localhost:8081/postgres
+
+username: postgres
+
+password: apple123
+
+

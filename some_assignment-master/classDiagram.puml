@@ -1,0 +1,39 @@
+@startuml
+
+class Customer{
+ - String name
+ - String address
+
+}
+class Account{
+ - Double balance
+}
+
+class Stock{
+  - String name
+  - Double unitPrice
+}
+
+class InvestmentAccount{
+ 
+ + buyStock(Stock stock,Integer qty) 
+}
+
+class SavingsAccount{
+  - Double interrestRate
+
+}
+
+class StockOrder{
+  - Integer quantity
+  - Double ticker
+}
+
+InvestmentAccount --|> Account
+SavingsAccount --|> Account
+
+Stock "1" --o "*" StockOrder
+InvestmentAccount "1" --o "*" StockOrder
+
+Customer "1" --* "*" Account
+@enduml
